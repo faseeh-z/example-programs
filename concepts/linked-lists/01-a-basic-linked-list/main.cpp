@@ -46,7 +46,8 @@ used today, as these alternatives often offer better
 performance and simpler usage with reduced memory overhead.
 
 But still, you may encounter linked lists in technical
-interviews. So, knowing about them is worthwhile.
+interviews. So, knowing about them is worthwhile. Also, it
+helps deepen your understanding of data structures.
 
 -------------------------------------------------------------
 
