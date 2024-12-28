@@ -38,8 +38,7 @@ class LinkedList
 
 public: // Public methods to manipulate the linked list.
 
-    // Constructor to initialize the head to nullptr.
-    LinkedList() : head(nullptr) {}
+    LinkedList() : head(nullptr) {} // Initializer list.
 
     // Use the same code from the previous example with some adjustments.
     // We no longer need to pass the head as argument as we can directly access it.
