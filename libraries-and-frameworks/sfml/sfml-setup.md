@@ -19,11 +19,11 @@ You can use your preferrd code editor to edit your application.
 
 ## How to Compile the Code
 
-To compile the code, we use something called a `MakeFile`. It is a file which which has no extension, only the name `MakeFile`. We can define how we need our code to be compiled in the MakeFile. But to read and execute it, we need to install `make`.
+To compile the code, we use something called a `MakeFile`. It is a file which which has no extension, only the name `MakeFile`. We can define how we need our code to be compiled in the MakeFile. But to execute it, we need to install *make*.
 
 Installing make it the easiest with Chocolatey. Install Chocolatey if you do not have it installed in your system. To install make, open the cmd and type the command `choco install make`.
 
-Now, its time to create the MakeFile. Create a new file named `MakeFile`. The content may look like this.
+Now, its time to create the MakeFile. Create a new file named `MakeFile` and copy the following code with suitable adjustments to the paths and names.
 
 ```MakeFile
 # Define paths
@@ -33,7 +33,7 @@ CXXFLAGS = -std=c++11 -Wall -I$(SFML_DIR)/include
 LDFLAGS = -L$(SFML_DIR)/lib -lsfml-graphics -lsfml-window -lsfml-system -mwindows
 
 # Define the target executable name
-TARGET = bin/dot_smash
+TARGET = bin/name_of_the_exe
 
 # Define the source files
 SRC = src/main.cpp
@@ -55,4 +55,33 @@ $(TARGET): $(OBJ)
 	$(CXX) -c $(CXXFLAGS) $< -o $@
 ```
 
-Now, we can compile our code with just one single command `make`.
+Now, we can compile our code with just one single command `make`. Make sure the current working directory is set up correctly before calling `make`.
+
+## If you are using VS Code
+
+You might see error squiggles on these lines and similar
+```cpp
+#include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
+```
+if you do not have the path to the SFML *include* folder added to the *Include path* in C/C++ Configurations. You can fix it with any of the following methods.
+
+### 1. Through the VS Code Interface
+
+Hover over the error squiggles and click the link named *Quick Fix* and click *Edit IncludePath setting*. Scroll down to *Include Path* section and add the path to the SFML `include` folder. Do not remove anything in the entry, just add the path on a new line. (I removed the line `${workspaceFolder}/**` and everything got broken)
+
+### 2. Buy Adding The Path to `c_cpp_properties.json` Directly
+
+In the first method, we used the GUI interface to edit the IncludePath in `c_cpp_properties.json`. But you can add the path to your SFML `include` folder directly.
+
+Find a directory named `.vscode` where the VS Code configuration files are placed. On that directory, open `c_cpp_properties.json` and add the path to SFML `include` folder in the `includePath` list. Again, do not remove anything from the list, just add the path as a new item.
+
+Now, the SFML headers will be identified correctly by VS Code.
+
+## Setup Complete!
+
+Now you can start creating your program. Check out the examples!
+
+*\*--- The End ---\**
+
+*Thanks for reading!*
