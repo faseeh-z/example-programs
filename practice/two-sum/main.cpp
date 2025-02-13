@@ -20,7 +20,6 @@
 // Output: [0,1]
 
 #include<iostream>
-#include<conio.h>
 #include<string>
 #include<vector>
 #include<unordered_map>
@@ -77,6 +76,5 @@ int main() {
     vector<int> output = solution.twoSum(inputVector, target);
     cout << output[0] << ", " << output[1] << endl;
 
-    _getch();
     return 0;
 }

@@ -1,6 +1,5 @@
 #include<iostream>
 #include<string>
-#include<conio.h>
 
 class Solution {
 public:
@@ -48,5 +47,6 @@ int main() {
         std::cout << "This integer is not a palindrome.";
     }
     std::cout << std::endl;
-    _getch();
+
+    return 0;
 }

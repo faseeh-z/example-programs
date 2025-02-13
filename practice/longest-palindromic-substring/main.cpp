@@ -15,7 +15,6 @@
 #include<iostream>
 #include<string>
 #include<unordered_map>
-#include<conio.h>
 
 using namespace std;
 
@@ -43,5 +42,6 @@ int main() {
     cin >> input;
     string output = Solution().longestPalindrome(input);
     cout << "The longest palindromic substring in the input is " << output << ".\n";
-    _getch();
+
+    return 0;
 }

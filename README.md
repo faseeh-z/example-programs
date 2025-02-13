@@ -1,6 +1,6 @@
 # Example Programs
 
-A set of example programs that might help you if you are learning to code.
+A collection of programs designed to assist you in learning to code.
 
 ## Concepts
 
@@ -18,7 +18,7 @@ A set of example programs that might help you if you are learning to code.
 - [Tkinter](libraries-and-frameworks/tkinter/)
 - [SFML](libraries-and-frameworks/sfml/)
 
-## Practice
+## Common Programming Problems and Their Solutions
 
 - [Add Two Numbers](practice/add-two-numbers/)
 - [Longest Palindromic Substring](practice/longest-palindromic-substring/)

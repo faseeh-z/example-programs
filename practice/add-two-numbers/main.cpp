@@ -21,7 +21,6 @@
 
 
 #include<iostream>
-#include<conio.h>
 #include<vector>
 
 
@@ -112,7 +111,5 @@ int main() {
     std::string sep = ", ";
     printList(returnList, sep);
 
-
-    _getch();
     return 0;
 }

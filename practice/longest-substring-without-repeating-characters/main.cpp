@@ -20,7 +20,6 @@
 
 #include<iostream>
 #include<string>
-#include<conio.h>
 #include<vector>
 #include<unordered_map>
 #include<algorithm>
@@ -53,5 +52,6 @@ int main() {
 
     int output = Solution().lengthOfLongestSubstring(s);
     cout << "The length of the longest substring is " << output << ".\n";
-    _getch();
+
+    return 0;
 }
